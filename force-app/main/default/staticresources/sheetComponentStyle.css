@@ -1,0 +1,39 @@
+/*****************
+* @description : sheetComponent 데이터테이블 용 css
+* @author : cogus1221@gmail.com
+* @group : 
+* @last modified on : 11-03-2022
+* @last modified by : cogus1221@gmail.com
+******************/
+.elementHoldingHTMLContent > table {
+    background-color: #f3f3f3;
+    border: 1px solid #333333;
+    border-radius: 5px;
+    border-collapse: collapse;
+    overflow: hidden;
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .25);
+}
+.elementHoldingHTMLContent > table tr #sjs-A1 {
+    background-color: #f3f3f3;
+}
+.elementHoldingHTMLContent > table tr :first-child  {
+    background-color:#e5f0fa;
+    font-weight: bold;
+}
+.elementHoldingHTMLContent > table tr:nth-of-type(1) {
+    font-weight: bold;
+    background-color:#e5f0fa;
+}
+.elementHoldingHTMLContent > table td {
+    text-align: center;
+    padding: 7px;
+    border: 1px solid #c0c0c0;
+    width: 450px;
+    table-layout: fixed;
+    word-break: break-all;
+}

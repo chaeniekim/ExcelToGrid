@@ -1,0 +1,27 @@
+<!--
+    @description : Excel file 업로드 시 Html Grid로 웹에 표시하는 컴포넌트
+    @author : cogus1221@gmail.com
+    @group : 
+    @last modified on : 11-04-2022
+    @last modified by : cogus1221@gmail.com
+-->
+<template>
+    <b>Sheetforce {version}</b>
+    <lightning-card title="Upload Excel File" icon-name="doctype:excel">
+        <p class="slds-p-horizontal_small" if:true={loading}>
+            <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+        </p>
+        <lightning-layout vertical-align="end">
+            <lightning-layout-item if:true={ready} padding="horizontal-small">
+                    <lightning-input type="file" label="Excel File" accept=".xlsx" onchange={uploadFile}></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item padding="horizontal-small">
+                <lightning-button label="Delete Grid" variant="brand" onclick={deleteHtml}></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+        <lightning-card>
+            <div class="elementHoldingHTMLContent" lwc:dom="manual" id="display_excel_data">
+            </div>
+        </lightning-card>     
+    </lightning-card>
+</template>
