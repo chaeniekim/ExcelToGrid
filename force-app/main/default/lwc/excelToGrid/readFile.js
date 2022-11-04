@@ -13,6 +13,6 @@ function readAsArrayBuffer(file) {
         }
         reader.readAsArrayBuffer(file);
     });
-}
+} 
 
 export { readAsArrayBuffer };

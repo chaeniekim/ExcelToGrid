@@ -23,7 +23,7 @@ export default class ExcelToGrid extends LightningElement {
 
     version = "???";
 
-    //1.페이지 로드 시 기존 데이터 불러오기
+    //1.페이지 로드 시 기존 데이터 불러오기 
     connectedCallback(){
         loadScript(this, sheetjs).then(()=>{
             this.version = XLSX.version;
