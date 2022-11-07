@@ -31,7 +31,6 @@ export default class ExcelToGrid extends LightningElement {
         })
         getSavedHtml({recordId: this.recordId})
         .then(savedHtml=>{
-            console.log('htmlLocation?: ', this.template.querySelector('.elementHoldingHTMLContent').innerHTML);
             if(!savedHtml){
                 this.template.querySelector('.elementHoldingHTMLContent').innerHTML = '';
             } else {
@@ -76,8 +75,6 @@ export default class ExcelToGrid extends LightningElement {
             })
 
             let convertedHtml = XLSX.utils.sheet_to_html(workbook.Sheets[sheetName], {header: ''});
-            console.log('convertedHtml: ',convertedHtml);
-
             this.template.querySelector('.elementHoldingHTMLContent').innerHTML = convertedHtml;
             
             return updateRecord({recordId: recordId, html: convertedHtml}).then(()=> data);
