@@ -1,4 +1,4 @@
-// wrapper around FileReader to work nicely in Promise chain
+// wrapper around FileReader to work nicely in Promise chain 
 function readAsArrayBuffer(file) {
     return new Promise(function(resolve, reject){
         var reader = new FileReader();
